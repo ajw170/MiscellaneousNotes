@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+<article class="snippet">
+  <header class="snippet-header">
+    <h1 class="snippet-title">{{ page.title }}</h1>
+    {% if page.date %}
+    <p class="snippet-meta">{{ page.date | date: "%B %d, %Y" }}</p>
+    {% endif %}
+    {% if page.language %}
+    <p class="snippet-language"><strong>Language:</strong> {{ page.language }}</p>
+    {% endif %}
+    {% if page.tags and page.tags.size > 0 %}
+    <p class="snippet-tags">
+      {% for tag in page.tags %}
+      <span class="tag">{{ tag }}</span>
+      {% endfor %}
+    </p>
+    {% endif %}
+  </header>
+
+  <div class="snippet-content">
+    {{ content }}
+  </div>
+</article>

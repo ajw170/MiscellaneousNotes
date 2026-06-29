@@ -15,6 +15,9 @@ collections:
   notes:
     output: true
     permalink: /notes/:name/
+  snippets:
+    output: true
+    permalink: /snippets/:name/
 
 defaults:
   - scope:
@@ -22,6 +25,11 @@ defaults:
       type: notes
     values:
       layout: note
+  - scope:
+      path: ""
+      type: snippets
+    values:
+      layout: snippet
 
 exclude:
   - Gemfile
