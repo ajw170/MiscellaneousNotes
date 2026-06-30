@@ -1,0 +1,37 @@
+title: Miscellaneous Technical Notes
+description: Random technical notes for personal reference.
+url: "https://ajw170.github.io"
+baseurl: "/MiscellaneousNotes"
+
+theme: minima
+
+show_excerpts: true
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+collections:
+  notes:
+    output: true
+    permalink: /notes/:name/
+  snippets:
+    output: true
+    permalink: /snippets/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: notes
+    values:
+      layout: note
+  - scope:
+      path: ""
+      type: snippets
+    values:
+      layout: snippet
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
